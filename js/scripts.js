@@ -48,11 +48,17 @@ control_capas.addOverlay(capa_temperatura, 'Temperatura');
 var capa_precipitacion = L.imageOverlay("https://raw.githubusercontent.com/tpb729-desarrollosigweb-2021/datos/main/worldclim/bio12_cr.png", 
 	[[11.2186629710523480, -87.0977137854603995], 
 	[5.5032827060751659, -82.5553380850013383]], 
-	{opacity:1.0}
+	{opacity:0.5}
 ).addTo(mapa);
 control_capas.addOverlay(capa_precipitacion, 'Precipitación');
 
-function updateOpacity() {
-  document.getElementById("span-opacity").innerHTML = document.getElementById("sld-opacity").value;
-  capa_temperatura.setOpacity(document.getElementById("sld-opacity").value);
+function updateOpacityTemp() {
+  document.getElementById("span-opacity-temp").innerHTML = document.getElementById("sld-opacity-temp").value;
+  capa_temperatura.setOpacity(document.getElementById("sld-opacity-temp").value);
 }
+
+function updateOpacityPrec() {
+  document.getElementById("span-opacity-prec").innerHTML = document.getElementById("sld-opacity-prec").value;
+  capa_precipitacion.setOpacity(document.getElementById("sld-opacity-prec").value);
+}
+

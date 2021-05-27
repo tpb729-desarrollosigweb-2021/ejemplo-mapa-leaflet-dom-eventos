@@ -16,19 +16,29 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <h1>Ejemplo de mapa Leaflet con código JavaScript para acceso al DOM y manejo de eventos</h1>     
+    <div class="row">
+        <h1>Ejemplo de mapa Leaflet con código JavaScript para acceso al DOM y manejo de eventos</h1>     
 
-    <a href="https://github.com/tpb729-desarrollosigweb-2021/ejemplo-mapa-leaflet-dom-eventos">Código fuente</a>
-    <p>
-    
-    <!-- Elemento div para contener el mapa Leaflet -->
-    <div id="mapid"></div>
+        <div class="column">
+            <a href="https://github.com/tpb729-desarrollosigweb-2021/ejemplo-mapa-leaflet-dom-eventos">Código fuente</a>
+            <p>
+            
+            <!-- Elemento div para contener el mapa Leaflet -->
+            <div id="mapid"></div>
 
-    <!-- Código JavaScript para generar y manejar el mapa Leaflet -->
-    <script src="js/scripts.js"></script>			
+            <!-- Código JavaScript para generar y manejar el mapa Leaflet -->
+            <script src="js/scripts.js"></script>		
+        </div>	
 
-    <!-- Controles para la opacidad de la capa de temperatura -->
-    <h5>Opacidad de la capa de temperatura: <span id="span-opacity">0.5</span></h5>
-    <input type='range' id='sld-opacity' min='0' max='1' step='0.1' value='0.5' onchange='updateOpacity();'>
+        <div class="column">
+            <!-- Controles para la opacidad de la capa de temperatura -->
+            <h5>Opacidad de la capa de temperatura: <span id="span-opacity-temp">0.5</span></h5>
+            <input type='range' id='sld-opacity-temp' min='0' max='1' step='0.1' value='0.5' onchange='updateOpacityTemp();'>
+
+            <!-- Controles para la opacidad de la capa de precipitación -->
+            <h5>Opacidad de la capa de precipitación: <span id="span-opacity-prec">0.5</span></h5>
+            <input type='range' id='sld-opacity-prec' min='0' max='1' step='0.1' value='0.5' onchange='updateOpacityPrec();'>
+        </div>
+    </div>
 </body>
 </html>
